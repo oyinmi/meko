@@ -8,13 +8,14 @@ import {
     TouchableOpacity,
     Image
 } from 'react-native';
+import brandImage from "../assets/brandImage.jpg";
 
 
 const Launch = ({ navigation }) => {
     return(
         <View style={ styles.container }>
 
-            <Image source={ require('../assets/car 1.jpg') } style={ styles.image} />
+            <Image style={styles.brandImage} source={brandImage} />
 
             <Text style={styles.brandName}> MEKO </Text>
 
@@ -23,7 +24,7 @@ const Launch = ({ navigation }) => {
             </View>
 
             <TouchableOpacity style={ styles.startButton }>
-               <Text style={ styles.startText } onPress={() => navigation.navigate('Signup')}> Get Started </Text>
+                <Text style={ styles.startText } onPress={() => navigation.navigate('Signup')}> Get Started </Text>
             </TouchableOpacity>
 
         </View>
@@ -41,28 +42,32 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         width: '100%',
         alignSelf: "center",
-        backgroundColor:"#EEFCFC"
+        backgroundColor:"#EEFCFC",
+        paddingTop: 250,
     },
-    image: {
-        width: 100,
-        height: 100,
-        // borderRadius: 100,
+    brandImage: {
+        width: 300,
+        height: 150,
+        paddingTop: 100,
+        paddingBottom:50,
     },
     brandName: {
         fontSize: 35,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'black',
+        paddingTop: 25,
     },
     mottoWrapper: {
         fontSize: 20,
         fontWeight: '600',
-        color: 'black'
+        color: 'black',
+        paddingBottom: 150,
     },
     motto: {
         textAlign: "center",
         fontSize: 18,
         fontWeight: 'bold',
-        paddingBottom: 90,
+        
     },
     startButton: {
         backgroundColor: "#36DBE5",

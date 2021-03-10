@@ -4,7 +4,6 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
-    Image
 } from 'react-native';
 
 
@@ -12,7 +11,7 @@ const Launch = ({ navigation }) => {
     return (
         <View style={styles.container}>
 
-            <Image source={require('../assets/car 1.jpg')} style={styles.image} />
+            
 
             <Text style={styles.brandName}> MEKO </Text>
 
@@ -45,11 +44,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '600',
         color: 'black'
-    },
-    image: {
-        width: 100,
-        height: 100,
-        // borderRadius: 100,
     },
     mottoWrapper: {
         fontSize: 20,
